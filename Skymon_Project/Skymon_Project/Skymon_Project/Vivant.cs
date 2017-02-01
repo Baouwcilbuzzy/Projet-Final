@@ -24,15 +24,16 @@ namespace Skymon_Project
             Nom = nom;
             // TODO: Construct any child components here
         }
-        public bool EstEnVie()
-        {
-            foreach (Pokemon in Pokemons/*liste de pokemons que le trainer a !!!!!!*/)
-                if (!(Pokemon.EstEnVie))
-                {
-                    return false;
-                }
-            return true;
-        }
+        public abstract bool EstEnVie();
+        // ca sa va être dans la classe trainer pour avoir accès a ses pokemons
+        //{
+        //    foreach (Pokemon in Pokemons/*liste de pokemons que le trainer a !!!!!!*/)
+        //        if (!(Pokemon.EstEnVie()))
+        //        {
+        //            return false;
+        //        }
+        //    return true;
+        //}
 
         /// <summary>
         /// Allows the game component to perform any initialization it needs to before starting

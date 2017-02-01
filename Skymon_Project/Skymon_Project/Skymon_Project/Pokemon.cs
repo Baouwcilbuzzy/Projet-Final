@@ -22,19 +22,30 @@ namespace Skymon_Project
 
         int pokedexNumber;
         int ptsVie;
+        bool estEnVie = true;
+
+        public bool EstEnVie()
+        {
+            return estEnVie;
+        }
 
         protected int PtsVie
         {
             get { return ptsVie; }
             set
             {
-                if (ConditionVie())
-                    ptsVie = value;
+                int valeur = ConditionVie(value);
+                    ptsVie = valeur;
             }
         }
-        private bool ConditionVie()
+        private int ConditionVie(int vie)
         {
-
+            if (vie <= 0)
+            {
+                vie = 0;
+                estEnVie = false;
+            }
+            return vie;
         }
 
         protected int PokedexNumber
