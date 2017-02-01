@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AS3D_2016", "AS3D_2016\AS3D_2016\AS3D_2016.csproj", "{B013CA51-2B81-4565-89EB-260A1F1EB444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AS3D_2016Content", "AS3D_2016\AS3D_2016Content\AS3D_2016Content.contentproj", "{5009EDDB-D372-4AB1-B5C3-B9C74B355AAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComposantsDeBase", "ComposantsDeBase\ComposantsDeBase.csproj", "{06EB93BC-561B-4A26-B3F3-FF223210C7B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B013CA51-2B81-4565-89EB-260A1F1EB444}.Debug|x86.ActiveCfg = Debug|x86
+		{B013CA51-2B81-4565-89EB-260A1F1EB444}.Debug|x86.Build.0 = Debug|x86
+		{B013CA51-2B81-4565-89EB-260A1F1EB444}.Release|x86.ActiveCfg = Release|x86
+		{B013CA51-2B81-4565-89EB-260A1F1EB444}.Release|x86.Build.0 = Release|x86
+		{5009EDDB-D372-4AB1-B5C3-B9C74B355AAD}.Debug|x86.ActiveCfg = Debug|x86
+		{5009EDDB-D372-4AB1-B5C3-B9C74B355AAD}.Release|x86.ActiveCfg = Release|x86
+		{06EB93BC-561B-4A26-B3F3-FF223210C7B9}.Debug|x86.ActiveCfg = Debug|x86
+		{06EB93BC-561B-4A26-B3F3-FF223210C7B9}.Debug|x86.Build.0 = Debug|x86
+		{06EB93BC-561B-4A26-B3F3-FF223210C7B9}.Release|x86.ActiveCfg = Release|x86
+		{06EB93BC-561B-4A26-B3F3-FF223210C7B9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
