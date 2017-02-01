@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skymon_Project", "Skymon_Project\Skymon_Project\Skymon_Project.csproj", "{F1CCCB70-2923-4C26-861B-D6B9917B0606}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Skymon_ProjectContent", "Skymon_Project\Skymon_ProjectContent\Skymon_ProjectContent.contentproj", "{4138A8E2-4A13-4CF8-BFB9-E156092F7057}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1CCCB70-2923-4C26-861B-D6B9917B0606}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{F1CCCB70-2923-4C26-861B-D6B9917B0606}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{F1CCCB70-2923-4C26-861B-D6B9917B0606}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{F1CCCB70-2923-4C26-861B-D6B9917B0606}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{F1CCCB70-2923-4C26-861B-D6B9917B0606}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{F1CCCB70-2923-4C26-861B-D6B9917B0606}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{4138A8E2-4A13-4CF8-BFB9-E156092F7057}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{4138A8E2-4A13-4CF8-BFB9-E156092F7057}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
