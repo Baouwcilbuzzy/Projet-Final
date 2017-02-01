@@ -1,0 +1,3 @@
+Content\Fonts\Arial.xnb
+Content\Textures\BleuBlancRouge.xnb
+Content\Textures\Pokeball.xnb
