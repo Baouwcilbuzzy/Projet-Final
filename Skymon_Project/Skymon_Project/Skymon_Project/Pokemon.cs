@@ -17,6 +17,7 @@ namespace Skymon_Project
     /// </summary>
     public class Pokemon : Microsoft.Xna.Framework.GameComponent
     {
+
         const int MAX_POKEDEX_NUMBER = 151;
         const int MIN_POKEDEX_NUMBER = 0;
 
