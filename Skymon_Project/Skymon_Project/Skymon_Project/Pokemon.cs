@@ -12,24 +12,42 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Skymon_Project
 {
-    /// <summary>
-    /// This is a game component that implements IUpdateable.
-    /// </summary>
-    public class Pokemon : Microsoft.Xna.Framework.GameComponent
+    public class Pokemon : Vivant
     {
+        bool valeurVie = true;
+        List<string> TypesRecu;
+        List<string> TypesOriginals;
 
         const int MAX_POKEDEX_NUMBER = 151;
         const int MIN_POKEDEX_NUMBER = 0;
+        const int MAX_NIVEAU = 100;
+        const int MIN_NIVEAU = 0;
 
         int pokedexNumber;
         int ptsVie;
-        bool estEnVie = true;
+        int niveau;
+        float poids;
+        string type1;
+        string type2;
+        string NomSprite;
 
-        public bool EstEnVie()
+        protected int Niveau
         {
-            return estEnVie;
+            get { return niveau; }
+            set
+            {
+                if(!(value > MAX_NIVEAU || value >= MIN_NIVEAU))
+                niveau = value;
+                else
+                {
+                    throw new Exception();
+                }
+            }
         }
-
+        public override bool EstEnVie()
+        {
+            return valeurVie;
+        }
         protected int PtsVie
         {
             get { return ptsVie; }
@@ -44,7 +62,7 @@ namespace Skymon_Project
             if (vie <= 0)
             {
                 vie = 0;
-                estEnVie = false;
+                valeurVie = false;
             }
             return vie;
         }
@@ -60,31 +78,59 @@ namespace Skymon_Project
                 }
             }
         }
-        public Pokemon(Game game)
-            : base(game)
+        public Pokemon(Game game, string nom, float poids,string types, string nomSprite)
+            : base(game, nom)
         {
-            // TODO: Construct any child components here
+            Checker1ou2type(types);
+            TypesRecu = new List<string>();
+            TypesOriginals = new List<string>();
         }
+        private  void Checker1ou2type(string types)
+        {
+            TypesOriginals.Add("FLYING");
+            TypesOriginals.Add("FIRE");
+            TypesOriginals.Add("WATER");
+            TypesOriginals.Add("FIGHTING");
+            TypesOriginals.Add("NORMAL");
+            TypesOriginals.Add("POISON");
+            TypesOriginals.Add("GRASS");
+            TypesOriginals.Add("ELETRIC");
+            TypesOriginals.Add("PSYCHIC");
+            TypesOriginals.Add("GROUND");
+            TypesOriginals.Add("ICE");
+            TypesOriginals.Add("ROCK");
+            TypesOriginals.Add("BUG");
+            TypesOriginals.Add("DRAGON");
+            TypesOriginals.Add("GHOST");
+            TypesOriginals.Add("DARK");
+            TypesOriginals.Add("STEEL");
+            TypesOriginals.Add("FAIRY");
 
-        /// <summary>
-        /// Allows the game component to perform any initialization it needs to before starting
-        /// to run.  This is where it can query for any required services and load content.
-        /// </summary>
+            TypesRecu = types.Split(',').ToList();
+            if (TypesRecu.Count == 1)
+            {
+                AssocierLesTypes(types);
+            }
+            else
+                if (TypesRecu.Count == 2)
+            {
+
+            }
+            else throw new Exception();
+        }
+        private void AssocierLesTypes(string types)
+        {
+            foreach (string t in TypesOriginals)
+            {
+                if (t == types)
+            }
+        }
         public override void Initialize()
         {
-            // TODO: Add your initialization code here
-
             base.Initialize();
         }
-
-        /// <summary>
-        /// Allows the game component to update itself.
-        /// </summary>
-        /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public override void Update(GameTime gameTime)
         {
-            // TODO: Add your update code here
-
             base.Update(gameTime);
         }
     }
