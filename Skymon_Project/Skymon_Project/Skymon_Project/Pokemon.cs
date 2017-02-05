@@ -29,7 +29,43 @@ namespace Skymon_Project
         float poids;
         string type1;
         string type2;
-        string NomSprite;
+        string nomSprite;
+
+
+
+        public string Type1 { get; private set; }
+        public string Type2 { get; private set; }
+        public string Types
+        {
+            get { return type1; }
+            set
+            {
+                Checker1ou2type(value);
+            }
+        }
+
+        protected float Poids
+        {
+            get { return poids; }
+            set
+            {
+                if (value > 0)
+                {
+                    poids = value;
+                }
+            }
+        }
+        protected string NomSprite
+        {
+            get { return nomSprite; }
+            set
+            {
+                if (!(string.IsNullOrEmpty(value)))
+                {
+                    nomSprite = value;
+                }
+            }
+        }
 
         protected int Niveau
         {
@@ -81,9 +117,11 @@ namespace Skymon_Project
         public Pokemon(Game game, string nom, float poids,string types, string nomSprite)
             : base(game, nom)
         {
-            Checker1ou2type(types);
             TypesRecu = new List<string>();
             TypesOriginals = new List<string>();
+            Poids = poids;
+            Types = types;
+            NomSprite = nomSprite;
         }
         private  void Checker1ou2type(string types)
         {
@@ -109,20 +147,22 @@ namespace Skymon_Project
             TypesRecu = types.Split(',').ToList();
             if (TypesRecu.Count == 1)
             {
-                AssocierLesTypes(types);
+                AssocierLesTypes(TypesRecu[0], Type1);
             }
             else
                 if (TypesRecu.Count == 2)
             {
-
+                AssocierLesTypes(TypesRecu[0],Type1);
+                AssocierLesTypes(TypesRecu[1], Type2);
             }
             else throw new Exception();
         }
-        private void AssocierLesTypes(string types)
+        private void AssocierLesTypes(string types, string propriété)
         {
             foreach (string t in TypesOriginals)
             {
-                if (t == types)
+                if (t == types.Trim().ToUpper())
+                    propriété = types;
             }
         }
         public override void Initialize()
