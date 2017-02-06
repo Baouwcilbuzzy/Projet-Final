@@ -14,6 +14,7 @@ namespace Skymon_Project
 {
     public class Trainer : Vivant
     {
+        
         bool valeurVie = true;
         public List<Pokemon> PokemonsSurLui { get; private set; }
         int age;
@@ -64,12 +65,34 @@ namespace Skymon_Project
         }
         public override void Initialize()
         {
+            
             base.Initialize();
         }
 
+
         public override void Update(GameTime gameTime)
         {
+            GérerLesInputs();
             base.Update(gameTime);
+        }
+        private void GérerLesInputs()
+        {
+            if (/*bouton de lancer de la pokeball est pesé*/ false)
+            {
+                LancerPokeball();
+            }
+        }
+
+        private void LancerPokeball()
+        {
+            InitialiserPokeball(this.Position);
+
+            
+        }
+
+        private void InitialiserPokeball(object position)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace Skymon_Project
 {
-    public abstract class Vivant : Microsoft.Xna.Framework.GameComponent
+    public abstract class Vivant : Microsoft.Xna.Framework.DrawableGameComponent
     {
         protected string Nom { get; private set; }
         public Vivant(Game game, string nom)
