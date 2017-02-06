@@ -123,6 +123,7 @@ namespace Skymon_Project
             Types = types;
             NomSprite = nomSprite;
         }
+        // peut etre dans comnbat pis ici onn va utiliser des vectors
         private  void Checker1ou2type(string types)
         {
             TypesOriginals.Add("FLYING");
@@ -142,7 +143,6 @@ namespace Skymon_Project
             TypesOriginals.Add("GHOST");
             TypesOriginals.Add("DARK");
             TypesOriginals.Add("STEEL");
-            TypesOriginals.Add("FAIRY");
 
             TypesRecu = types.Split(',').ToList();
             if (TypesRecu.Count == 1)
